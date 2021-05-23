@@ -15,17 +15,17 @@
         public function comprobarRutas() {
 
             // Arreglo de rutas protegidas
-            $rutas_protegidas = ['/',
+            $rutas_protegidas = ['/admin',
                                 '/recetas',
-                                '/recetas/crear',
-                                '/recetas/actualizar',
-                                '/recetas/eliminar',
-                                '/usuarios/crear',
-                                '/usuarios/actualizar',
-                                '/usuarios/eliminar',
-                                '/categorias/crear',
-                                '/categorias/actualizar',
-                                '/categorias/eliminar',
+                                '/receta/crear',
+                                '/receta/actualizar',
+                                '/receta/eliminar',
+                                '/usuario/crear',
+                                '/usuario/actualizar',
+                                '/usuario/eliminar',
+                                '/categoria/crear',
+                                '/categoria/actualizar',
+                                '/categoria/eliminar',
                                 '/doc',
                                 '/contacto'
             ];
@@ -37,9 +37,8 @@
 
             if ($metodo === 'GET') {
                 // debuguear($this->rutasGET);
-                
-                // debuguear($this->rutasGET[$urlActual]);
                 $fn = $this->rutasGET[$urlActual] ?? null;
+                // debuguear($this->rutasGET[$urlActual]);
             }
 
             // // Proteger las rutas

@@ -11,18 +11,18 @@ $router = new Router();
 
 $router->get('/admin',[RecetaController::class, 'index']);
 
-$router->get('/recetas','recetas');
-$router->get('/recetas/crear','recetas');
-$router->get('/recetas/actualizar','recetas');
-$router->get('/recetas/eliminar','recetas');
+$router->get('/receta','recetas');
+$router->get('/receta/crear',[RecetaController::class, 'crear']);
+$router->get('/receta/actualizar',[RecetaController::class, 'actualizar']);
+$router->get('/receta/eliminar',[RecetaController::class, 'eliminar']);
 
-$router->get('/usuarios/crear','recetas');
-$router->get('/usuarios/actualizar','recetas');
-$router->get('/usuarios/eliminar','recetas');
+$router->get('/usuario/crear','recetas');
+$router->get('/usuario/actualizar','recetas');
+$router->get('/usuario/eliminar','recetas');
 
-$router->get('/categorias/crear','recetas');
-$router->get('/categorias/actualizar','recetas');
-$router->get('/categorias/eliminar','recetas');
+$router->get('/categoria/crear','recetas');
+$router->get('/categoria/actualizar','recetas');
+$router->get('/categoria/eliminar','recetas');
 
 
 
