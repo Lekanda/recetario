@@ -5,8 +5,10 @@ use MVC\Router;
 use Model\Receta;
 
 class RecetaController{
-    public static function index () {
-        echo "Index Controlador";
+    public static function index (Router $router) {
+        // debuguear($router);
+
+        $router->render('recetas/admin');
     }
 
     public static function crear (Router $router) {

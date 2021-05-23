@@ -14,21 +14,21 @@
 
         public function comprobarRutas() {
 
-            // Arreglo de rutas protegidas
-            $rutas_protegidas = ['/admin',
-                                '/recetas',
-                                '/receta/crear',
-                                '/receta/actualizar',
-                                '/receta/eliminar',
-                                '/usuario/crear',
-                                '/usuario/actualizar',
-                                '/usuario/eliminar',
-                                '/categoria/crear',
-                                '/categoria/actualizar',
-                                '/categoria/eliminar',
-                                '/doc',
-                                '/contacto'
-            ];
+            // // Arreglo de rutas protegidas
+            // $rutas_protegidas = ['/admin',
+            //                     '/recetas',
+            //                     '/receta/crear',
+            //                     '/receta/actualizar',
+            //                     '/receta/eliminar',
+            //                     '/usuario/crear',
+            //                     '/usuario/actualizar',
+            //                     '/usuario/eliminar',
+            //                     '/categoria/crear',
+            //                     '/categoria/actualizar',
+            //                     '/categoria/eliminar',
+            //                     '/doc',
+            //                     '/contacto'
+            // ];
 
             $urlActual = $_SERVER['PATH_INFO'] ?? '/';
             // debuguear($urlActual);
@@ -55,5 +55,11 @@
             } else {
                 echo 'Pagina no encontrada';
             }
+        }
+
+        // Muestra la vista
+        public function render($view){
+            // echo 'desde Render'; 
+            include __DIR__ . "/views/$view.php";
         }
     }
