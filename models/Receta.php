@@ -6,12 +6,13 @@ class Receta extends ActiveRecord{
 
     protected static $tabla='recetas';
 
-    protected static $columnasDB =['id','titulo','imagen','ingredientes'];
+    protected static $columnasDB =['id','titulo','imagen','ingredientes','descripcion'];
 
     public $id;
     public $titulo;
     public $imagen;
     public $ingredientes;
+    public $descripcion;
 
     // Constructor
     public function __construct($args = []){
@@ -19,6 +20,7 @@ class Receta extends ActiveRecord{
         $this->titulo = $args['titulo'] ?? '';
         $this->imagen = $args['imagen'] ?? '';
         $this->ingredientes = $args['ingredientes'] ?? '';
+        $this->descripcion = $args['descripcion'] ?? '';
     }
 
     public function validar(){
@@ -26,6 +28,10 @@ class Receta extends ActiveRecord{
         if (!$this->titulo) {
             // $errores[] => añade al arreglo $errores
             self::$errores[] = "Debes añadir un titulo";
+        }
+        if (!$this->descripcion) {
+            // $errores[] => añade al arreglo $errores
+            self::$errores[] = "Debes añadir una descripcion";
         }
         
         // if (!$this->imagen) {

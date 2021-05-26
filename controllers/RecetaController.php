@@ -7,14 +7,15 @@ use Model\Receta;
 class RecetaController{
     public static function index (Router $router) {
         // debuguear($router);
+        $recetas = Receta::all();
+        // debuguear($recetas);
 
-        $router->render('recetas/admin');
+        $router->render('/recetas/admin',[
+            'recetas' => $recetas
+        ]);
     }
 
     public static function crear (Router $router) {
-
-        echo 'Crear propiedad';
-
 
         $receta = new Receta();
         debuguear($receta);
@@ -28,4 +29,8 @@ class RecetaController{
     public static function eliminar () {
         echo 'Eliminar propiedad';
     }
+
+
+
+
 }

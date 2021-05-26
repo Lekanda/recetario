@@ -58,8 +58,20 @@
         }
 
         // Muestra la vista
-        public function render($view){
-            // echo 'desde Render'; 
+        public function render($view, $datos){
+            // debuguear($datos);
+            foreach($datos as $key => $value){
+                $$key = $value;// $$key: key es la llave y value es el valor.$$ Variable de variable. No sabemos que variable ira. Crea variables en la vista
+            }
+
+
+            // Comienza a guardar en memoria la vista  __DIR__ . "/views/$view.php"
+            ob_start();
             include __DIR__ . "/views/$view.php";
+            // Inyecta $contenido en layout
+            $contenido=ob_get_clean();
+            include __DIR__ . "/views/layout.php";
+
+
         }
     }

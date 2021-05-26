@@ -31,7 +31,7 @@
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end;
+        // align-items: flex-end;
     }
 }
 
@@ -50,7 +50,7 @@
     }
     
     a {
-        color: $blanco;
+        color: lighten($morado,18);
         text-decoration: none;
         font-size: 2.2rem;
         display: block;

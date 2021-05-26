@@ -170,10 +170,11 @@ class ActiveRecord{
         // debuguear($resultado);
         return $resultado;
     }
-
+    
     // Metodo para actualizar un registro de la DB x su ID.
     public static function find($id){
         $query = "SELECT * FROM " . static::$tabla . " WHERE id = ${id}";
+        debuguear($query);
         $resultado = self::consultarSQL($query);
 
         return array_shift($resultado); // array_shift: Nos devuelve el primer resultado de un arreglo

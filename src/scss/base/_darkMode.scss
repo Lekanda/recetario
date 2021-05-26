@@ -1,5 +1,5 @@
 .dark-mode {
-    background-color: darken($grisOscuro, 10);
+    background-color: darken($moradoOscuro, 10);
 
     p {
         color: $blanco;
@@ -23,10 +23,6 @@
     }
     
 
-    .texto-nosotros blockquote {
-        color: $blanco;
-    }
-   
     .formulario {
         label,
         legend,
@@ -46,26 +42,31 @@
     .propiedades{
         text-align: center;
         color: darken($verde, 5);
+        cuerpo-tabla-propiedades
+        
         th{
             color: darken($verde, 28);
         }
+        th:nth-child(3){
+            width: 20rem;
+        }
+        th:nth-child(2){
+            width: 50rem;
+        }
         .cuerpo-tabla-propiedades td:nth-child(even){
-            color: lighten($verde, 18);
+            color: lighten($morado, 18);
             // background-color: $grisOscuro;
         }
-        .cuerpo-tabla-propiedades td:nth-child(1){
-            color: darken($verde, 5);
-            // background-color: darken($verde, 15);
-        }
-        .cuerpo-tabla-propiedades td:nth-child(2),
-        .cuerpo-tabla-propiedades td:nth-child(4){
-            color: darken($verde, 5);
+        .cuerpo-tabla-propiedades td:nth-child(1),
+        .cuerpo-tabla-propiedades td:nth-child(2){
+            color: $naranja;
         }
 
         .cuerpo-tabla-propiedades td:nth-child(3){
             .imagen-tabla{
                 padding: 0;
                 align-content: center;
+                margin-top: 16px;
 
             }
         }
