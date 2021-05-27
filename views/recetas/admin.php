@@ -53,4 +53,30 @@
         </tbody>
     </table>
 
+    <!-- <h1>Inline editor</h1>
+    <div id="editor">
+        <p>This is some sample content.</p>
+    </div>
+    <script>
+        InlineEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script> -->
+
+    <h1>Classic editor</h1>
+    <div id="editor2">
+        <p class="txt-descri">This is some sample content.</p>
+    </div>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor2'),{
+                
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
 </main>
