@@ -26,7 +26,6 @@
             <tbody class="cuerpo-tabla-propiedades"><!-- Mostrar los resultados -->
                 <?php foreach($recetas as $receta) : ?>
                     <tr class="ficha-receta">
-                        <!-- <td> <?php echo $receta->id; ?> </td> -->
                         <td><?php echo $receta->titulo; ?></td>
                         <td>
                             <?php

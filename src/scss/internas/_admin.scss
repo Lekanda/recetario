@@ -15,9 +15,9 @@
 
 .propiedades{
     text-align: center;
-    color: darken($verde, 5);
-    th{
-        color: darken($verde, 28);
+    color: darken($morado, 15);
+    th:nth-child(1){
+        width: 15rem;
     }
     th:nth-child(2){
         width: 50rem;
@@ -25,30 +25,31 @@
     th:nth-child(3){
         width: 20rem;
     }
-    .cuerpo-tabla-propiedades td:nth-child(even){
-        color: lighten($morado, 18);
-        // background-color: $grisOscuro;
+    th:nth-child(4){
+        width: 7rem;
     }
     .cuerpo-tabla-propiedades td:nth-child(1),
     .cuerpo-tabla-propiedades td:nth-child(2){
-        color: $morado;
-        font-size: 12px;
+        color: darken($morado,19);
+        font-size: 15px;
         padding: 5px;
-
+        line-height: 2.8rem;
     }
-
+    .cuerpo-tabla-propiedades td:nth-child(1){
+        font-weight: bold;
+        color: darken($naranja,22);
+    }
     .cuerpo-tabla-propiedades td:nth-child(3){
         .imagen-tabla{
             padding: 0;
             align-content: center;
             margin-top: 16px;
-
         }
     }
     .cabeza-form{
         background-color: $morado;
+        color: darken($moradoOscuro, 35);
     }
-    
 }
 
 .imagen-small{
@@ -57,6 +58,7 @@
 
 .seccion .btn-nueva-rece{
     margin: 0px 0px 10px 5px;
+    max-width: 16rem;
 }
 .seccion .titulo-admin{
     font-family: $fuente_secundaria;
