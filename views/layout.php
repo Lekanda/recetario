@@ -20,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etxeko Rezetak</title>
     <link rel="stylesheet" type="text/css" href="../build/css/app.css">
+    
 </head>
 <body class="dark-mode">
     
@@ -71,7 +72,7 @@
             </nav>
         </div>
 
-        <p data-cy="copyright" class="copyright">Todos los derechos Reservados <?php echo date('Y'); ?> &copy;</p>
+        <p data-cy="copyright" class="copyright">Todos los derechos Reservados <?php echo date('Y'); ?> &copy; Lekanda Dev</p>
     </footer>
     <script src="../build/js/bundle.min.js"></script>
     
