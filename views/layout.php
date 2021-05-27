@@ -27,9 +27,9 @@
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="index.php">
-                    <img src="/build/img/logo.svg" alt="Logotipo de Bienes Raices">
+                    <img class="logo-header" src="/build/img/logo.svg" alt="Logotipo de Etxeko Errezetak">
                 </a>
-                <h1 class="admin-titulo">Etxeko Errezetak</h2>
+                <h1>Etxeko Errezetak</h2>
 
                 <div class="mobile-menu">
                     <img src="/build/img/barras.svg" alt="icono menu responsive">

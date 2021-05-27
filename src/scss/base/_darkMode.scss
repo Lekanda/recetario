@@ -42,10 +42,8 @@
     .propiedades{
         text-align: center;
         color: darken($verde, 5);
-        cuerpo-tabla-propiedades
-        
         th{
-            color: darken($verde, 28);
+            color: darken($moradoOscuro, 28);
         }
         th:nth-child(3){
             width: 20rem;
@@ -57,9 +55,20 @@
             color: lighten($morado, 18);
             // background-color: $grisOscuro;
         }
+        
         .cuerpo-tabla-propiedades td:nth-child(1),
         .cuerpo-tabla-propiedades td:nth-child(2){
-            color: $naranja;
+            font-size: 12px;
+            padding: 5px;
+
+        }
+        .cuerpo-tabla-propiedades td:nth-child(1){
+            color: lighten($morado,7);
+            
+        }
+        .cuerpo-tabla-propiedades td:nth-child(2){
+            color: lighten($morado,18);
+            
         }
 
         .cuerpo-tabla-propiedades td:nth-child(3){
@@ -70,5 +79,13 @@
 
             }
         }
+        .cabeza-form{
+            background-color: $moradoOscuro;
+        }
     }
 }
+
+.imagen-small{
+    width: 50rem;
+}
+

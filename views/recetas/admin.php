@@ -1,5 +1,5 @@
-<main class="contenedor seccion">
-        <h1>Listado Recetas</h1>
+<main class="contenedor seccion seccion-main">
+        <h1 class="titulo-admin">Listado Recetas</h1>
         
         <!-- <?php  
             if ($resultado) {
@@ -11,13 +11,13 @@
         ?> -->
         
 
-        <a href="/receta/crear" class="boton boton-verde">Nueva Receta</a>
+        <a href="/receta/crear" class="boton boton-verde btn-nueva-rece">Nueva Receta</a>
 
         <table class="propiedades">
             <thead>
-                <tr>
+                <tr class="cabeza-form">
                     <!-- <th>ID</th> -->
-                    <th>Titulo</th>
+                    <th>Receta</th>
                     <th>Descripcion</th>
                     <th>Imagen</th>
                     <th>Acciones</th>
@@ -30,10 +30,9 @@
                         <td><?php echo $receta->titulo; ?></td>
                         <td>
                             <?php
-                                echo substr($receta->descripcion, 0,200);
+                                echo substr($receta->descripcion, 0,350);
                             ?>
                             <br>
-                            <a href="#">Leer Mas</a>
                         </td>
 
 

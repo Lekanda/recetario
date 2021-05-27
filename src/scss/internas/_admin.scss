@@ -13,29 +13,54 @@
     }
 }
 
-table.propiedades{
-    margin-top: 4rem;
-    width: 100%;
-    border-spacing: 0;
+.propiedades{
+    text-align: center;
+    color: darken($verde, 5);
+    th{
+        color: darken($verde, 28);
+    }
+    th:nth-child(2){
+        width: 50rem;
+    }
+    th:nth-child(3){
+        width: 20rem;
+    }
+    .cuerpo-tabla-propiedades td:nth-child(even){
+        color: lighten($morado, 18);
+        // background-color: $grisOscuro;
+    }
+    .cuerpo-tabla-propiedades td:nth-child(1),
+    .cuerpo-tabla-propiedades td:nth-child(2){
+        color: $morado;
+        font-size: 12px;
+        padding: 5px;
 
+    }
 
-    thead{
-        background-color: $morado;
-
-        th{
-            color: $blanco;
-            padding: 2rem;
+    .cuerpo-tabla-propiedades td:nth-child(3){
+        .imagen-tabla{
+            padding: 0;
+            align-content: center;
+            margin-top: 16px;
 
         }
     }
-
-    .imagen-tabla{
-        width: 19rem;
+    .cabeza-form{
+        background-color: $morado;
     }
+    
 }
 
 .imagen-small{
     width: 50rem;
+}
+
+.seccion .btn-nueva-rece{
+    margin: 0px 0px 10px 5px;
+}
+.seccion .titulo-admin{
+    font-family: $fuente_secundaria;
+    color: lighten($morado,18);
 }
 
 

@@ -1,9 +1,9 @@
-// .no-webp .inicio {
-//     background-image: url(../img/header.jpg);
-// }
-// .webp .inicio {
-//     background-image: url(../img/header.webp);
-// }
+.no-webp .inicio {
+    background-image: url(../img/header.jpg);
+}
+.webp .inicio {
+    background-image: url(../img/header.webp);
+}
 
 .header {
     background-color: $moradoOscuro;
@@ -35,5 +35,10 @@
         font-weight: $bold;
         line-height: 2;
         max-width: 60rem;
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+        color: lighten($morado,18);
+    }
+    .dark-mode-boton path{
+        fill: currentColor !important;
     }
 }
