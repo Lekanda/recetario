@@ -34,9 +34,9 @@ class Receta extends ActiveRecord{
             self::$errores[] = "Debes añadir una descripcion";
         }
         
-        // if (!$this->imagen) {
-        //     self::$errores[] = "Debes seleccionar una imagen para la propiedad";
-        // }
+        if (!$this->imagen) {
+            self::$errores[] = "Debes seleccionar una imagen para la propiedad";
+        }
 
         return self::$errores;
     }

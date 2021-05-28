@@ -23,11 +23,8 @@ class RecetaController{
 
         // Arreglo con mensajes de errores
         $errores = Receta::getErrores();
+        // debuguear($errores);
 
-        $router->render('/recetas/crear',[
-            'errores' => $errores,
-            'receta' => $receta
-        ]);
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // El constructor de la clase es un Arreglo y $_POST tambien por eso se puede pasar asi.
@@ -71,6 +68,12 @@ class RecetaController{
                $receta->guardar();
             }
         }
+
+        $router->render('/recetas/crear',[
+            'errores' => $errores,
+            'receta' => $receta
+        ]);
+
     }
 
     public static function actualizar () {
