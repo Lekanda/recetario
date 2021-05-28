@@ -29,16 +29,25 @@ class Receta extends ActiveRecord{
             // $errores[] => añade al arreglo $errores
             self::$errores[] = "Debes añadir un titulo";
         }
-        if (!$this->descripcion) {
-            // $errores[] => añade al arreglo $errores
-            self::$errores[] = "Debes añadir una descripcion";
+        if (strlen($this->titulo) < 4) {
+            self::$errores[] = "Titulo 4 letras minimo";
         }
-        
         if (!$this->imagen) {
             self::$errores[] = "Debes seleccionar una imagen para la propiedad";
+        }
+        if (!$this->ingredientes) {
+            self::$errores[] = "Debes añadir ingredientes";
+        }
+        if (strlen($this->ingredientes) < 10) {
+            self::$errores[] = "Ingredientes 10 letras minimo";
+        }
+        if (!$this->descripcion) {
+            self::$errores[] = "Debes añadir una descripcion";
+        }
+        if (strlen($this->titulo) < 10) {
+            self::$errores[] = "Descripcion 10 letras minimo";
         }
 
         return self::$errores;
     }
-    
 }

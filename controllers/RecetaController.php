@@ -73,7 +73,6 @@ class RecetaController{
             'errores' => $errores,
             'receta' => $receta
         ]);
-
     }
 
     public static function actualizar () {
