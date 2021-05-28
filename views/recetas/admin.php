@@ -66,21 +66,19 @@
     </script> -->
 
 
-    <h1>Classic editor</h1>
-    <div id="editor2">
-        <p>This is some sample content.</p>
-    </div>
-    <script>
+    
+    
+    <!-- <script>
         ClassicEditor
-            .create(document.querySelector('#editor2'), {
+            .create(document.querySelector('#ingredientes'), {
                 
             })
             .catch(error => {
                 console.error(error);
             });
-    </script>
+    </script> -->
 
-    <!-- <div id="toolbar-container"></div>
+    <div id="toolbar-container"></div>
     <div id="editor">
         
     </div>
@@ -95,7 +93,7 @@
             .catch(error => {
                 console.error(error);
             });
-    </script> -->
+    </script>
 
 
 </main>

@@ -21,7 +21,7 @@
         padding: 1rem;
         display: block;
         width: 100%;
-        background-color: $blanco;
+        background-color: $gris;
         border: 1px solid $gris;
         border-radius: 1rem;
         margin-bottom: 2rem;
@@ -43,6 +43,8 @@
     }
 
     .btn-bajo-form{
-        max-width: 186px;
+        max-width: 18rem;
     }
+
+    
 }

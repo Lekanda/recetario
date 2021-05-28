@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
     // Para cerrar la conexion de autenticacion. 1º traer el $_SESSION a la pantalla donde ponemos el boton de cerrar sesion.
     if (!isset($_SESSION)) {
         session_start();
@@ -10,7 +10,7 @@
     if (!isset($inicio)) {
         $inicio = false;
     }
-?>
+?> -->
 
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etxeko Rezetak</title>
     <!-- <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/inline/ckeditor.js"></script> -->
-    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script> -->
     <!-- <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/decoupled-document/ckeditor.js"></script> -->
     <link rel="stylesheet" type="text/css" href="../build/css/app.css">
 
@@ -42,8 +42,8 @@
                 <div class="derecha">
                     <img class="dark-mode-boton" src="/build/img/dark-mode.svg">
                     <nav data-cy="navegacion-header" class="navegacion">
-                        <a href="/nosotros">+ Receta</a>
-                        <a href="/propiedades">+ Categoria</a>
+                        <a href="/receta/crear">+ Receta</a>
+                        <a href="/categoria/crear">+ Categoria</a>
                         <a href="/blog">Doc</a>
                         <a href="/contacto">Contacto</a>
                         <?php if ($auth) : ?>
@@ -79,6 +79,6 @@
         <p data-cy="copyright" class="copyright">Todos los derechos Reservados <?php echo date('Y'); ?> &copy; Lekanda Dev</p>
     </footer>
     <script src="../build/js/bundle.min.js"></script>
-    
+
 </body>
 </html>
