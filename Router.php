@@ -12,6 +12,11 @@
             $this->rutasGET[$url] = $fn;
         }
 
+        // Metodo POST que toma la urlactual y la funcion asociada.
+        public function post($url, $fn){
+            $this->rutasPOST[$url] = $fn;
+        }
+
         public function comprobarRutas() {
 
             // // Arreglo de rutas protegidas
@@ -39,11 +44,15 @@
                 // debuguear($this->rutasGET);
                 $fn = $this->rutasGET[$urlActual] ?? null;
                 // debuguear($this->rutasGET[$urlActual]);
+            } else {
+                // debuguear($_POST);
+                // debuguear($this);
+                $fn = $this->rutasPOST[$urlActual] ?? null;
             }
 
-            // // Proteger las rutas
+            // // // Proteger las rutas
             // if (in_array($urlActual, $rutas_protegidas)) {
-            //     // debuguear($urlActual);
+            //     debuguear($urlActual);
             //     header('Location: /');
             // }
 

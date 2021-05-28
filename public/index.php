@@ -11,8 +11,9 @@ $router = new Router();
 
 $router->get('/admin',[RecetaController::class, 'index']);
 
-$router->get('/receta','recetas');
+$router->get('/recetas','recetas');
 $router->get('/receta/crear',[RecetaController::class, 'crear']);
+$router->post('/receta/crear',[RecetaController::class, 'crear']);
 $router->get('/receta/actualizar',[RecetaController::class, 'actualizar']);
 $router->get('/receta/eliminar',[RecetaController::class, 'eliminar']);
 

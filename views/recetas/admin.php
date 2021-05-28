@@ -65,18 +65,37 @@
             });
     </script> -->
 
+
     <h1>Classic editor</h1>
     <div id="editor2">
-        <p class="txt-descri">This is some sample content.</p>
+        <p>This is some sample content.</p>
     </div>
     <script>
         ClassicEditor
-            .create(document.querySelector('#editor2'),{
+            .create(document.querySelector('#editor2'), {
                 
             })
             .catch(error => {
                 console.error(error);
             });
     </script>
+
+    <!-- <div id="toolbar-container"></div>
+    <div id="editor">
+        
+    </div>
+    <script>
+        DecoupledEditor
+            .create(document.querySelector('#editor'))
+            .then(editor => {
+                const toolbarContainer = document.querySelector('#toolbar-container');
+
+                toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script> -->
+
 
 </main>

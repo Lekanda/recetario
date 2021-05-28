@@ -16,10 +16,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etxeko Rezetak</title>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/inline/ckeditor.js"></script> -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/decoupled-document/ckeditor.js"></script> -->
     <link rel="stylesheet" type="text/css" href="../build/css/app.css">
+
     
 </head>
 <body class="dark-mode">

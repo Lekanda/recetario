@@ -27,6 +27,9 @@
     "terser": "^5.3.8"
   },
   "dependencies": {
-    "ckeditor4": "^4.16.1"
+    "@ckeditor/ckeditor5-build-classic": "^27.1.0",
+    "@ckeditor/ckeditor5-code-block": "^27.1.0",
+    "@ckeditor/ckeditor5-font": "^27.1.0",
+    "@ckeditor/ckeditor5-highlight": "^27.1.0"
   }
 }
