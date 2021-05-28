@@ -44,7 +44,7 @@
                     <nav data-cy="navegacion-header" class="navegacion">
                         <a href="/receta/crear">+ Receta</a>
                         <a href="/categoria/crear">+ Categoria</a>
-                        <a href="/blog">Doc</a>
+                        <a href="/documentacion">Doc</a>
                         <a href="/contacto">Contacto</a>
                         <?php if ($auth) : ?>
                             <a href="/logout">Cerrar Sesion</a>
