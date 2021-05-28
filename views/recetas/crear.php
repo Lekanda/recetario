@@ -1,5 +1,5 @@
 <main class="contenedor seccion">
-    <h1>Crear Receta</h1>
+    <h1 class="titulo-main">Crear Receta</h1>
 
     <a href="/admin" class="boton boton-verde">Volver</a>
 

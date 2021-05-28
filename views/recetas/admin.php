@@ -1,5 +1,5 @@
 <main class="contenedor seccion seccion-main">
-    <h1 class="titulo-admin">Listado Recetas</h1>
+    <h1 class="titulo-main">Listado Recetas</h1>
 
     <!-- <?php
             if ($resultado) {
