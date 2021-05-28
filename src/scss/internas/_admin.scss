@@ -60,8 +60,9 @@
     margin: 0px 0px 10px 5px;
     max-width: 16rem;
 }
-.seccion .titulo-admin{
-    font-family: $fuente_secundaria;
+.seccion-main .titulo-admin{
+    font-family: $fuente_terciaria;
     color: lighten($morado,18);
+    margin-right: 24rem;
 }
 

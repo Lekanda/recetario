@@ -78,7 +78,7 @@
             });
     </script> -->
 
-    <div id="toolbar-container"></div>
+    <!-- <div id="toolbar-container"></div>
     <div id="editor">
         
     </div>
@@ -93,7 +93,7 @@
             .catch(error => {
                 console.error(error);
             });
-    </script>
+    </script> -->
 
 
 </main>
