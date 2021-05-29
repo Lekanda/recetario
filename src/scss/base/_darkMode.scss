@@ -1,5 +1,5 @@
 .dark-mode {
-    background-color: darken($moradoOscuro, 10);
+    background-color: darken($moradoOscuro, 12);
 
     p {
         color: $blanco;
@@ -7,6 +7,14 @@
 
     a, h1,h2,h3,h4  {
         color: $gris;
+    }
+    .main-crear{
+        .btn-volver{
+            color: #281030;
+        }
+        .btn-nueva-receta{
+            color: #281030;
+        }
     }
 
     .anuncio, 
@@ -56,4 +64,5 @@
 .imagen-small{
     width: 50rem;
 }
+
 

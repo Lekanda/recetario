@@ -11,7 +11,7 @@
                 ?> -->
 
 
-    <a href="/receta/crear" class="boton boton-verde btn-nueva-rece">Nueva Receta</a>
+    <a href="/receta/crear" class="boton boton-verde btn-nueva-receta">Nueva Receta</a>
 
     <table class="propiedades">
         <thead>

@@ -49,6 +49,7 @@
     .cabeza-form{
         background-color: $morado;
         color: darken($moradoOscuro, 35);
+        font-family: $fuente_terciaria;
     }
 }
 
@@ -56,13 +57,14 @@
     width: 50rem;
 }
 
-.seccion .btn-nueva-rece{
+.seccion .btn-nueva-receta{
     margin: 0px 0px 10px 5px;
-    max-width: 16rem;
+    max-width: 18rem;
+    color:#281030;
 }
 .seccion .titulo-main{
     font-family: $fuente_terciaria;
-    color: lighten($morado,18);
+    color: darken($morado,18);
     margin-right: 24rem;
 }
 
