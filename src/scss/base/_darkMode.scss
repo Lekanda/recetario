@@ -33,10 +33,11 @@
         input:not([type="submit"]), 
         textarea,
         select {
-            background-color: $grisOscuro;
-            border: 1px solid $grisOscuro;
-            color: $blanco;
+            background-color: $moradoSuave;
+            border: 2px solid lighten($morado,15);
+            color: $grisOscuro;
         }
+        
     }
 
     .propiedades{
@@ -46,7 +47,6 @@
         .cuerpo-tabla-propiedades td:nth-child(2){
             color: $moradoSuave;
         }
-
         .cabeza-form{
             background-color: $moradoOscuro;
             color: lighten($moradoOscuro, 45);

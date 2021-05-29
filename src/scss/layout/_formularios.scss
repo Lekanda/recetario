@@ -8,12 +8,14 @@
     legend {
         font-size: 2rem;
         color: $grisOscuro;
+        font-family: $fuente_terciaria;
     }
 
     label {
         font-weight: $bold;
         text-transform: uppercase;
         display: block;
+        font-family: $fuente_terciaria;
     }
     input:not([type="submit"]), 
     textarea,
@@ -21,14 +23,16 @@
         padding: 1rem;
         display: block;
         width: 100%;
-        background-color: $gris;
-        border: 1px solid $gris;
+        background-color: lighten($moradoSuave,10);
+        border: 1px solid $morado;
         border-radius: 1rem;
         margin-bottom: 2rem;
+        font-size: 20px;
+        font-family: $fuente_principal;
     }
 
     textarea {
-        height: 20rem;
+        height: 40rem;
     }
 
     .forma-contacto {

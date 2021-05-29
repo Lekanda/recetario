@@ -15,4 +15,12 @@
 
         <input type="submit" value="Crear Propiedad" class="boton boton-verde btn-bajo-form">
     </form>
+    <!-- <script>
+        ClassicEditor
+            .create( document.querySelector( '#ingredientes' ),{
+            } )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script> -->
 </main>

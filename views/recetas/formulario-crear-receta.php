@@ -11,11 +11,21 @@
         <img src="/imagenes/<?php echo $receta->imagen ?>" alt="Imagen receta" class="imagen-small">
     <?php endif; ?>
 
+
+
+
     <label for="ingredientes">Ingredientes:</label>
-    <textarea id="ingredientes" name="receta[ingredientes]" placeholder="Ingredientes 10 letras mininmo"><?php echo s($receta->descripcion); ?></textarea>
+    <textarea class="fondo-campo" id="ingredientes" name="receta[ingredientes]" placeholder="Ingredientes 10 letras mininmo"><?php echo s($receta->descripcion); ?></textarea>
+
+
+
 
     <label for="descripcion">Descripcion:</label>
     <textarea id="descripcion" name="receta[descripcion]" placeholder="Descripcion receta, 10 letras minimo"><?php echo s($receta->descripcion); ?></textarea>
+
+
+    
+
 </fieldset>
 
 
