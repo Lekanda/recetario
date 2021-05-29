@@ -44,7 +44,7 @@ class Receta extends ActiveRecord{
         if (!$this->descripcion) {
             self::$errores[] = "Debes añadir una descripcion";
         }
-        if (strlen($this->titulo) < 10) {
+        if (strlen($this->descripcion) < 10) {
             self::$errores[] = "Descripcion 10 letras minimo";
         }
 

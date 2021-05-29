@@ -10,12 +10,21 @@ class RecetaController{
     public static function index (Router $router) {
         // debuguear($router);
         $recetas = Receta::all();
+        // Muestra mensaje condicional, si no hay lo pone como null
+        $resultado = $_GET['resultado'] ?? null;
+        debuguear($_GET);
+        // debuguear($resultado);
         // debuguear($recetas);
 
         $router->render('/recetas/admin',[
-            'recetas' => $recetas
+            'recetas' => $recetas,
+            'resultado' => $resultado
         ]);
     }
+
+
+
+
 
     public static function crear (Router $router) {
 
@@ -74,6 +83,10 @@ class RecetaController{
             'receta' => $receta
         ]);
     }
+
+
+
+
 
     public static function actualizar () {
         echo 'Actualizar propiedad';

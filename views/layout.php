@@ -1,4 +1,4 @@
-<!-- <?php 
+<?php 
     // Para cerrar la conexion de autenticacion. 1º traer el $_SESSION a la pantalla donde ponemos el boton de cerrar sesion.
     if (!isset($_SESSION)) {
         session_start();
@@ -10,7 +10,7 @@
     if (!isset($inicio)) {
         $inicio = false;
     }
-?> -->
+?>
 
 
 <!DOCTYPE html>

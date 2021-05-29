@@ -1,14 +1,14 @@
 <main class="contenedor seccion seccion-main">
     <h1 class="titulo-main">Listado Recetas</h1>
 
-    <!-- <?php
-            if ($resultado) {
-                $mensaje = mostrarNotificacion(intval($resultado));
-                if ($mensaje) { ?>
-                    <p class="alerta exito"><?php echo s($mensaje) ?></p>
-                <?php }
-            }
-                ?> -->
+    <?php
+        if ($resultado) {
+            $mensaje = mostrarNotificacion(intval($resultado));
+            if ($mensaje) { ?>
+                <p class="alerta exito"><?php echo s($mensaje) ?></p>
+            <?php }
+        }
+    ?>
 
 
     <a href="/receta/crear" class="boton boton-verde btn-nueva-receta">Nueva Receta</a>
@@ -66,21 +66,24 @@
     </script> -->
 
 
-    
-    
-    <!-- <script>
+    <div id="editor">
+        <p>This is some sample content.</p>
+    </div>
+
+    <script>
         ClassicEditor
-            .create(document.querySelector('#ingredientes'), {
-                
+            .create(document.querySelector('#editor'), {
+
             })
             .catch(error => {
                 console.error(error);
             });
-    </script> -->
+    </script>
+
+
 
     <!-- <div id="toolbar-container"></div>
     <div id="editor">
-        
     </div>
     <script>
         DecoupledEditor

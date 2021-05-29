@@ -15,12 +15,12 @@
 
         <input type="submit" value="Crear Receta" class="boton boton-verde btn-bajo-form">
     </form>
-    <!-- <script>
+    <script>
         ClassicEditor
             .create( document.querySelector( '#ingredientes' ),{
             } )
             .catch( error => {
                 console.error( error );
             } );
-    </script> -->
+    </script>
 </main>
