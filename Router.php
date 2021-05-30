@@ -52,7 +52,7 @@
 
             // Proteger las rutas
             if (!in_array($urlActual, $rutas_protegidas)) {
-                debuguear($urlActual);
+                // debuguear($urlActual);
                 header('Location: /');
             }
 
