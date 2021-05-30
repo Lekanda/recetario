@@ -5,27 +5,45 @@ namespace Model;
 class Admin extends ActiveRecord{
     // Base de Datos. Asocia la tabla USUARIOS con el modelo Admin.php
     protected static $tabla = 'usuarios';
-    protected static $columnasDB = ['id','email','password'];
+    protected static $columnasDB = ['id','nombre','apellidos','email','alias','password'];
 
     public $id;
+    public $nombre;
+    public $apellidos;
     public $email;
+    public $alias;
     public $password;
 
     // Constructor
     public function __construct($args = []){
         $this->id = $args['id'] ?? null;
+        $this->nombre = $args['nombre'] ?? '';
+        $this->apellidos = $args['apellidos'] ?? '';
         $this->email = $args['email'] ?? '';
+        $this->alias = $args['alias'] ?? '';
         $this->password = $args['password'] ?? '';
     }
 
     public function validar(){
         // Validar que no vaya vacio
+        if (!$this->nombre) {
+            // $errores[] => añade al arreglo $errores
+            self::$errores[] = "Debes añadir un Nombre valido";
+        }
+        if (!$this->apellidos) {
+            // $errores[] => añade al arreglo $errores
+            self::$errores[] = "Debes añadir unos Apellidos Validos";
+        }
         if (!$this->email) {
             // $errores[] => añade al arreglo $errores
-            self::$errores[] = "Debes añadir un email valido";
+            self::$errores[] = "Debes añadir un Email valido";
+        }
+        if (!$this->alias) {
+            // $errores[] => añade al arreglo $errores
+            self::$errores[] = "Debes añadir un Alias valido";
         }
         if (!$this->password) {
-            self::$errores[] = "Debes añadir un password valido";
+            self::$errores[] = "Debes añadir un Password valido";
         }
         return self::$errores;
     }

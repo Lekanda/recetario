@@ -32,7 +32,9 @@
                                 '/categoria/actualizar',
                                 '/categoria/eliminar',
                                 '/doc',
-                                '/contacto'
+                                '/contacto',
+                                '/login',
+                                '/logon',
             ];
 
             $urlActual = $_SERVER['PATH_INFO'] ?? '/';

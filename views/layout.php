@@ -1,10 +1,10 @@
 <?php 
     // Para cerrar la conexion de autenticacion. 1º traer el $_SESSION a la pantalla donde ponemos el boton de cerrar sesion.
-    if (!isset($_SESSION)) {
-        session_start();
-    }
+    // if (!isset($_SESSION)) {
+    //     session_start();
+    // }
     // var_dump($_SESSION);
-    $auth=$_SESSION['login'] ?? false;
+    // $auth=$_SESSION['login'] ?? false;
     // var_dump($auth);
 
     if (!isset($inicio)) {
@@ -46,11 +46,11 @@
                         <a href="/categoria/crear">+ Categoria</a>
                         <a href="/documentacion">Doc</a>
                         <a href="/contacto">Contacto</a>
-                        <?php if ($auth) : ?>
+                        <!-- <?php if ($auth) : ?>
                             <a href="/logout">Cerrar Sesion</a>
                         <?php else : ?>
                             <a href="/login">Login</a>
-                        <?php endif ?>
+                        <?php endif ?> -->
                     </nav>
                 </div>
                 
