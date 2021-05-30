@@ -19,21 +19,21 @@
 
         public function comprobarRutas() {
 
-            // // Arreglo de rutas protegidas
-            // $rutas_protegidas = ['/admin',
-            //                     '/recetas',
-            //                     '/receta/crear',
-            //                     '/receta/actualizar',
-            //                     '/receta/eliminar',
-            //                     '/usuario/crear',
-            //                     '/usuario/actualizar',
-            //                     '/usuario/eliminar',
-            //                     '/categoria/crear',
-            //                     '/categoria/actualizar',
-            //                     '/categoria/eliminar',
-            //                     '/doc',
-            //                     '/contacto'
-            // ];
+            // Arreglo de rutas protegidas
+            $rutas_protegidas = ['/admin',
+                                '/recetas',
+                                '/receta/crear',
+                                '/receta/actualizar',
+                                '/receta/eliminar',
+                                '/usuario/crear',
+                                '/usuario/actualizar',
+                                '/usuario/eliminar',
+                                '/categoria/crear',
+                                '/categoria/actualizar',
+                                '/categoria/eliminar',
+                                '/doc',
+                                '/contacto'
+            ];
 
             $urlActual = $_SERVER['PATH_INFO'] ?? '/';
             // debuguear($urlActual);
@@ -50,11 +50,11 @@
                 $fn = $this->rutasPOST[$urlActual] ?? null;
             }
 
-            // // Proteger las rutas
-            // if (!in_array($urlActual, $rutas_protegidas)) {
-            //     debuguear($urlActual);
-            //     header('Location: /');
-            // }
+            // Proteger las rutas
+            if (!in_array($urlActual, $rutas_protegidas)) {
+                debuguear($urlActual);
+                header('Location: /');
+            }
 
             if($fn){
                 // La url existe y hay una funcion asociada

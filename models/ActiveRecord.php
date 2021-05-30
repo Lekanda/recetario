@@ -47,6 +47,7 @@ class ActiveRecord{
         // debuguear($query);
         
         $resultado=self::$db-> query($query); // Nos da true/False segun ha sido la conexion a DB
+        // debuguear($resultado);
         // Mensaje de exito/error en guardar datos.
         if($resultado){
             header('Location: /admin?resultado=1');

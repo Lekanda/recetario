@@ -12,6 +12,7 @@
 
 
     <a href="/receta/crear" class="boton boton-verde btn-nueva-receta">Nueva Receta</a>
+    <a href="/categoria/crear" class="boton boton-verde btn-nueva-receta">Nueva Categoria</a>
 
     <table class="propiedades">
         <thead>
@@ -66,7 +67,7 @@
     </script> -->
 
 
-    <div id="editor">
+    <!-- <div id="editor">
         <p>This is some sample content.</p>
     </div>
 
@@ -78,7 +79,7 @@
             .catch(error => {
                 console.error(error);
             });
-    </script>
+    </script> -->
 
 
 
