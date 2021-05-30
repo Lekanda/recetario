@@ -12,7 +12,7 @@ class RecetaController{
         $recetas = Receta::all();
         // Muestra mensaje condicional, si no hay lo pone como null
         $resultado = $_GET['resultado'] ?? null;
-        debuguear($_GET);
+        // debuguear($_GET);
         // debuguear($resultado);
         // debuguear($recetas);
 

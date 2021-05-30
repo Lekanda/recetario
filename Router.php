@@ -50,8 +50,8 @@
                 $fn = $this->rutasPOST[$urlActual] ?? null;
             }
 
-            // // // Proteger las rutas
-            // if (in_array($urlActual, $rutas_protegidas)) {
+            // // Proteger las rutas
+            // if (!in_array($urlActual, $rutas_protegidas)) {
             //     debuguear($urlActual);
             //     header('Location: /');
             // }
