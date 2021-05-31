@@ -11,7 +11,7 @@
     <?php endforeach; ?>
 
     <form class="formulario" method="POST" enctype="multipart/form-data">
-        <?php include __DIR__ . '/formulario-crear-receta.php' ?>
+        <?php include __DIR__ . '/formulario-receta.php' ?>
         <input type="submit" value="Crear Receta" class="boton boton-verde btn-bajo-form">
     </form>
     <script>
