@@ -52,6 +52,41 @@
         font-family: $fuente_terciaria;
     }
 }
+.categorias{
+    th:nth-child(1){
+        width: 11rem;
+    }
+    th:nth-child(2){
+        width: 18rem;
+    }
+    th:nth-child(3){
+        width: 20rem;
+    }
+    .cuerpo-tabla-categorias td:nth-child(1),
+    .cuerpo-tabla-categorias td:nth-child(2){
+        color: darken($morado,19);
+        font-size: 15px;
+        padding: 5px;
+        line-height: 2.8rem;
+    }
+    .cuerpo-tabla-categorias td:nth-child(1){
+        font-weight: bold;
+        color: darken($naranja,22);
+    }
+    .cuerpo-tabla-categorias td:nth-child(3){
+        .imagen-tabla{
+            padding: 0;
+            align-content: center;
+            margin-top: 16px;
+        }
+    }
+    .cabeza-form{
+        background-color: $morado;
+        color: darken($moradoOscuro, 35);
+        font-family: $fuente_terciaria;
+    }
+}
+
 
 .imagen-small{
     width: 50rem;

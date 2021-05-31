@@ -17,7 +17,6 @@
     <table class="propiedades">
         <thead>
             <tr class="cabeza-form">
-                <!-- <th>ID</th> -->
                 <th>Receta</th>
                 <th>Descripcion</th>
                 <th>Imagen</th>
@@ -56,7 +55,7 @@
 
     <h2 class="titulo-main">Categorias</h2>
     <a href="/categoria/crear" class="boton boton-verde btn-nueva-receta">Nueva Categoria</a>
-    <table class="propiedades">
+    <table class="categorias">
         <thead>
             <tr class="cabeza-form">
                 <th>ID</th>
@@ -64,7 +63,7 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody class="cuerpo-tabla-propiedades">
+        <tbody class="cuerpo-tabla-categorias">
             <!-- Mostrar los resultados -->
             <?php foreach ($categorias as $categoria) : ?>
                 <tr>

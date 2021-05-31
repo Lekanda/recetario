@@ -60,6 +60,12 @@
             color: lighten($moradoOscuro, 45);
         }
     }
+    .categorias{
+        .cabeza-form{
+            background-color: $moradoOscuro;
+            color: lighten($moradoOscuro, 45);
+        }
+    }
 }
 .imagen-small{
     width: 50rem;
