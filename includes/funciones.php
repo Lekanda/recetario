@@ -34,7 +34,7 @@ function s ($html) : string{
 
 // Validar el tipo de contenido
 function validarTipoContenido ($tipo){
-    $tipos = ['vendedor','receta'];
+    $tipos = ['categoria','receta','usuario'];
     // in_array -> busca un string en un arreglo. 1º el string a buscar; 2º Arreglo donde buscarlo
     return in_array($tipo, $tipos);
 }

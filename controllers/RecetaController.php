@@ -56,6 +56,7 @@ class RecetaController{
             if ($_FILES['receta']['tmp_name']['imagen']) {
                 $image = Image::make($_FILES['receta']['tmp_name']['imagen'])->fit(800,600);
                 $receta->setImagen($nombreImagen);
+                // debuguear($receta);
             }
 
             // debuguear($_SERVER["DOCUMENT_ROOT"]);
@@ -69,13 +70,12 @@ class RecetaController{
                 if(!is_dir(CARPETAS_IMAGENES)){
                     mkdir(CARPETAS_IMAGENES);
                 }
-    
-                // Guarda la imagen en el servidor
-                $image->save(CARPETAS_IMAGENES . $nombreImagen);
-    
-                // Guarda en la DB
-               $receta->guardar();
             }
+            // Guarda la imagen en el servidor
+            $image->save(CARPETAS_IMAGENES . $nombreImagen);
+    
+            // Guarda en la DB
+           $receta->guardar();
         }
 
         $router->render('/recetas/crear',[
@@ -88,8 +88,55 @@ class RecetaController{
 
 
 
-    public static function actualizar () {
-        echo 'Actualizar propiedad';
+    public static function actualizar (Router $router) {
+        $id = validarORedireccionar('/admin');
+
+        $receta = Receta::find($id);
+
+        $errores = Receta::getErrores();
+
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // debuguear($_POST);
+            // Asignar los atributos
+            $args = $_POST['receta'];
+            $receta->sincronizar($args);
+            // debuguear($args);
+            
+            // Validacion
+            $errores = $receta->validar();
+            
+
+            // Subida de archivos(Imagen). Realiza un resize a la imagen con Intervention Image.
+            // Generar un nombre unico
+            // debuguear($_FILES['receta']['tmp_name']['imagen']);
+            $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
+            if ($_FILES['receta']['tmp_name']['imagen']) {
+                $image = Image::make($_FILES['receta']['tmp_name']['imagen'])->fit(800,600);
+                // debuguear($_FILES['receta']['tmp_name']['imagen']);
+                // debuguear($image);
+                $receta->setImagen($nombreImagen);
+            } 
+            // debuguear($_SERVER["DOCUMENT_ROOT"]);
+            // Validar 
+            // $errores = $receta->validar();
+            
+            //Comprobar que no haya errores en arreglo $errores. Comprueba que este VACIO.
+            if (empty($errores)) {
+                // Almacenar la imagen
+                if ($_FILES['receta']['tmp_name']['imagen']){
+                    $image->save(CARPETAS_IMAGENES . $nombreImagen);
+                }
+                
+                $receta->guardar();
+            }
+        }
+            
+        $router->render('/recetas/actualizar', [
+            'receta' => $receta,
+            'errores' => $errores
+        ]);
+
     }
 
     public static function eliminar () {

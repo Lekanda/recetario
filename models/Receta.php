@@ -32,9 +32,9 @@ class Receta extends ActiveRecord{
         if (strlen($this->titulo) < 4) {
             self::$errores[] = "Titulo 4 letras minimo";
         }
-        if (!$this->imagen) {
-            self::$errores[] = "Debes seleccionar una imagen para la propiedad";
-        }
+        // if (!$this->imagen) {
+        //     self::$errores[] = "Debes seleccionar una imagen para la propiedad";
+        // }
         if (!$this->ingredientes) {
             self::$errores[] = "Debes añadir ingredientes";
         }
