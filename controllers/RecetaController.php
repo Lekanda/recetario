@@ -3,6 +3,7 @@
 namespace Controllers;
 use MVC\Router;
 use Model\Receta;
+use Model\Categoria;
 use Intervention\Image\ImageManagerStatic as Image;
 
 
@@ -10,6 +11,8 @@ class RecetaController{
     public static function index (Router $router) {
         // debuguear($router);
         $recetas = Receta::all();
+        $categorias = Categoria::all();
+
         // Muestra mensaje condicional, si no hay lo pone como null
         $resultado = $_GET['resultado'] ?? null;
         // debuguear($_GET);
@@ -17,6 +20,7 @@ class RecetaController{
         // debuguear($recetas);
 
         $router->render('/recetas/admin',[
+            'categorias' => $categorias,
             'recetas' => $recetas,
             'resultado' => $resultado
         ]);

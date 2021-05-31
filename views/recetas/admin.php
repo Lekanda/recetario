@@ -2,12 +2,12 @@
     <h1 class="titulo-main">Listado Recetas</h1>
 
     <?php
-        if ($resultado) {
-            $mensaje = mostrarNotificacion(intval($resultado));
-            if ($mensaje) { ?>
-                <p class="alerta exito"><?php echo s($mensaje) ?></p>
-            <?php }
-        }
+    if ($resultado) {
+        $mensaje = mostrarNotificacion(intval($resultado));
+        if ($mensaje) { ?>
+            <p class="alerta exito"><?php echo s($mensaje) ?></p>
+    <?php }
+    }
     ?>
 
 
@@ -48,6 +48,37 @@
                             <input type="submit" class="boton-rojo-block" value="Eliminar">
                         </form>
                         <a href="/receta/actualizar?id=<?php echo $receta->id; ?>" class="boton-amarillo-block">Actualizar</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
+    <h2 class="titulo-main">Categorias</h2>
+    <a href="/categoria/crear" class="boton boton-verde btn-nueva-receta">Nueva Categoria</a>
+    <table class="propiedades">
+        <thead>
+            <tr class="cabeza-form">
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="cuerpo-tabla-propiedades">
+            <!-- Mostrar los resultados -->
+            <?php foreach ($categorias as $categoria) : ?>
+                <tr>
+                    <td> <?php echo $categoria->id; ?> </td>
+                    <td><?php echo $categoria->nombre ?></td>
+
+                    <td>
+                        <form method="POST" class="w-100" action="/categorias/eliminar">
+                            <input type="hidden" name="id" value="<?php echo $categoria->id; ?>">
+                            <input type="hidden" name="tipo" value="vendedor">
+
+                            <input type="submit" class="boton-rojo-block" value="Eliminar">
+                        </form>
+                        <a href="/categoria/actualizar?id=<?php echo $categoria->id; ?>" class="boton-amarillo-block">Actualizar</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
