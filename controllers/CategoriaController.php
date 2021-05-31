@@ -21,10 +21,11 @@ class CategoriaController{
             // El constructor de la clase es un Arreglo y $_POST tambien por eso se puede pasar asi.
             $categoria = new Categoria($_POST['categoria']);
             // debuguear($categoria);
-
+            
             // Validar 
             $errores = $categoria->validar();
-    
+            // debuguear($errores);
+            
             // Comprobar que no haya errores en arreglo $errores. Comprueba que este VACIO (empty).
             if (empty($errores)) {
                 // Guarda en la DB

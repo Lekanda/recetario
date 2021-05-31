@@ -6,15 +6,17 @@ class Categoria extends ActiveRecord{
 
     protected static $tabla='categorias';
 
-    protected static $columnasDB = ['id','nombre'];
+    protected static $columnasDB = ['id','nombre','descripcion'];
 
     public $id;
     public $nombre;
+    public $descripcion;
 
     // Constructor
     public function __construct($args = []){
         $this->id = $args['id'] ?? null;
         $this->nombre = $args['nombre'] ?? '';
+        $this->descripcion = $args['descripcion'] ?? '';
     }
 
 

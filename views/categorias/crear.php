@@ -20,7 +20,7 @@
     <?php endforeach; ?>
 
     <form class="formulario" method="POST" >
-        <?php include __DIR__ . '/formulario-crear-categoria.php' ?>
+        <?php include __DIR__ . '/formulario-categoria.php' ?>
         <input type="submit" value="Crear Categoria" class="boton boton-verde btn-bajo-form">
     </form>
     
