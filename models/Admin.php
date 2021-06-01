@@ -5,13 +5,14 @@ namespace Model;
 class Admin extends ActiveRecord{
     // Base de Datos. Asocia la tabla USUARIOS con el modelo Admin.php
     protected static $tabla = 'usuarios';
-    protected static $columnasDB = ['id','nombre','apellidos','email','alias','password'];
+    protected static $columnasDB = ['id','nombre','apellidos','email','alias','creado','password'];
 
     public $id;
     public $nombre;
     public $apellidos;
     public $email;
     public $alias;
+    public $creado;
     public $password;
 
     // Constructor
@@ -21,6 +22,7 @@ class Admin extends ActiveRecord{
         $this->apellidos = $args['apellidos'] ?? '';
         $this->email = $args['email'] ?? '';
         $this->alias = $args['alias'] ?? '';
+        $this->creado = date('Y/m/d');
         $this->password = $args['password'] ?? '';
     }
 
