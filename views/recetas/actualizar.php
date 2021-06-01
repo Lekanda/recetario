@@ -11,7 +11,7 @@
     <a href="/admin" class="boton boton-verde">Volver</a>
 
     <form class="formulario" method="POST" enctype="multipart/form-data">
-        <?php include __DIR__ . '/formulario-crear-receta.php' ?>
+        <?php include __DIR__ . '/formulario-receta.php' ?>
 
         <input type="submit" value="Actualizar Propiedad" class="boton boton-verde">
     </form>

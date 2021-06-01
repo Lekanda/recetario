@@ -9,11 +9,11 @@ class LoginController{
     public static function login(Router $router){
 
         $errores = [];
-
+        
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // debuguear($_POST);
-            $auth = new Admin($_POST);
-            
+            $auth = new Admin($_POST['usuario']);
+            // debuguear($auth);
             $errores = $auth->validar();
             // debuguear($errores);
 
@@ -40,8 +40,6 @@ class LoginController{
             'errores' => $errores
         ]);
     }
-
-
 
 
     public static function logon(Router $router){
@@ -71,8 +69,6 @@ class LoginController{
         ]);
     }
     
-
-
 
 
 

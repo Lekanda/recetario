@@ -6,6 +6,7 @@ use MVC\Router;
 use Controllers\RecetaController;
 use Controllers\CategoriaController;
 use Controllers\LoginController;
+use Controllers\PaginaController;
 
 $router = new Router();
 
@@ -37,12 +38,15 @@ $router->get('/categoria/eliminar',[CategoriaController::class, 'eliminar']);
 // Rutas Autenticacion
 $router->get('/login', [LoginController::class, 'login']);
 $router->post('/login', [LoginController::class, 'login']);
+$router->get('/logout', [LoginController::class, 'logout']);
+
 
 $router->get('/logon', [LoginController::class, 'logon']);
 $router->post('/logon', [LoginController::class, 'logon']);
 
 
 
+$router->get('/',[PaginaController::class, 'index']);
 $router->get('/doc','doc');
 $router->get('/contacto','contacto');
 

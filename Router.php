@@ -17,11 +17,19 @@
             $this->rutasPOST[$url] = $fn;
         }
 
+
+
+
+
         public function comprobarRutas() {
+
+            session_start();
+            // debuguear($_SESSION);
+            $auth =$_SESSION['login'] ?? null;
+            // debuguear($auth);
 
             // Arreglo de rutas protegidas
             $rutas_protegidas = ['/admin',
-                                '/recetas',
                                 '/receta/crear',
                                 '/receta/actualizar',
                                 '/receta/eliminar',
@@ -31,10 +39,8 @@
                                 '/categoria/crear',
                                 '/categoria/actualizar',
                                 '/categoria/eliminar',
-                                '/doc',
                                 '/contacto',
-                                '/login',
-                                '/logon',
+                                '/logout',
             ];
 
             $urlActual = $_SERVER['PATH_INFO'] ?? '/';
@@ -53,7 +59,7 @@
             }
 
             // Proteger las rutas
-            if (!in_array($urlActual, $rutas_protegidas)) {
+            if (in_array($urlActual, $rutas_protegidas) && !$auth) {
                 // debuguear($urlActual);
                 header('Location: /');
             }
@@ -67,6 +73,14 @@
                 echo 'Pagina no encontrada';
             }
         }
+
+
+
+
+
+
+
+
 
         // Muestra la vista
         public function render($view, $datos){

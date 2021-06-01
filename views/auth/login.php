@@ -4,16 +4,16 @@
         <div data-cy="alerta-login" class="alerta error"><?php echo $error; ?></div>
     <?php endforeach; ?>
 
-    <form data-cy="formulario-login" method="POST" class="formulario" action="/login">
+    <form method="POST" class="formulario" action="/login">
         <fieldset>
             <legend>Introduce datos de Inicio de Sesion</legend>
 
             <label for="email">E-mail</label>
-            <input data-cy="input-email-login" type="email" placeholder="Usuario: a@a.com" id="email" name="usuario[email]" >
+            <input  type="email" placeholder="Usuario: a@a.com" id="email" name="usuario[email]" >
             <span> </span>
 
             <label for="password">Contraseña</label>
-            <input data-cy="input-pass-login" type="password" placeholder="Contraseña: 123456" id="password" name="usuario[password]" >
+            <input  type="password" placeholder="Contraseña: 123456" id="password" name="usuario[password]" >
         </fieldset>
         <input type="submit" value="Iniciar Sesion" class="boton boton-verde">
     </form>
