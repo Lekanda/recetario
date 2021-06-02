@@ -84,11 +84,16 @@ class ActiveRecord{
 
         // Elimina la propiedad de la DB.
         $query = "DELETE FROM " . static::$tabla . " WHERE id = " . self::$db->escape_string($this->id) . " LIMIT 1";
+        // debuguear($query);
         $resultado = self::$db->query($query);
+        // debuguear($resultado);
 
         if ($resultado) {
             $this->borrarImagen();
             header('Location: /admin?resultado=3' );
+        } else {
+            header('Location: /admin' );
+
         }
     }
 

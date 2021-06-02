@@ -67,4 +67,22 @@ class CategoriaController{
             'errores' => $errores
         ]);
     }
+
+    public static function eliminar (){
+        // echo 'Eliminar Categoria GET';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Validar ID
+            $id = $_POST['id'];
+            // debuguear($id);
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+            if ($id) {
+                $tipo = $_POST['tipo'];
+                // debuguear($_POST['tipo']);
+                if (validarTipoContenido($tipo)) {
+                    $propiedad = Categoria::find($id);
+                    $propiedad->eliminar();
+                }
+            }
+        }
+    }
 }

@@ -71,9 +71,9 @@
                     <td><?php echo $categoria->nombre ?></td>
 
                     <td>
-                        <form method="POST" class="w-100" action="/categorias/eliminar">
+                        <form method="POST" class="w-100" action="/categoria/eliminar">
                             <input type="hidden" name="id" value="<?php echo $categoria->id; ?>">
-                            <input type="hidden" name="tipo" value="vendedor">
+                            <input type="hidden" name="tipo" value="categoria">
 
                             <input type="submit" class="boton-rojo-block" value="Eliminar">
                         </form>
