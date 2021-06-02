@@ -40,13 +40,13 @@
                                 '/categoria/actualizar',
                                 '/categoria/eliminar',
                                 '/contacto',
-                                '/logout',
+                                '/logout'
             ];
 
             $urlActual = $_SERVER['PATH_INFO'] ?? '/';
             // debuguear($urlActual);
             $metodo = $_SERVER['REQUEST_METHOD'];
-            //  debuguear($metodo);
+            // debuguear($metodo);
 
             if ($metodo === 'GET') {
                 // debuguear($this->rutasGET);

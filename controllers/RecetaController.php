@@ -144,10 +144,21 @@ class RecetaController{
     }
 
     public static function eliminar () {
-        echo 'Eliminar propiedad';
+        echo 'Pagina de receta controller';
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Validar ID
+            $id = $_POST['id'];
+            // debuguear($id);
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+            if ($id) {
+                $tipo = $_POST['tipo'];
+                if (validarTipoContenido($tipo)) {
+                    $propiedad = Receta::find($id);
+                    $propiedad->eliminar();
+                }
+            }
+        }
     }
-
-
-
 
 }

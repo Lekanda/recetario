@@ -22,11 +22,7 @@ $router->post('/receta/crear',[RecetaController::class, 'crear']);
 $router->get('/receta/actualizar',[RecetaController::class, 'actualizar']);
 $router->post('/receta/actualizar',[RecetaController::class, 'actualizar']);
 $router->get('/receta/eliminar',[RecetaController::class, 'eliminar']);
-
-// Rutas Usuario
-$router->get('/usuario/crear', 'crear');
-$router->get('/usuario/actualizar','recetas');
-$router->get('/usuario/eliminar','recetas');
+$router->post('/receta/eliminar',[RecetaController::class, 'eliminar']);
 
 // Rutas Categoria
 $router->get('/categoria/crear',[CategoriaController::class, 'crear']);
@@ -34,6 +30,15 @@ $router->post('/categoria/crear',[CategoriaController::class, 'crear']);
 $router->get('/categoria/actualizar',[CategoriaController::class, 'actualizar']);
 $router->post('/categoria/actualizar',[CategoriaController::class, 'actualizar']);
 $router->get('/categoria/eliminar',[CategoriaController::class, 'eliminar']);
+$router->post('/categoria/eliminar',[CategoriaController::class, 'eliminar']);
+
+// Rutas Usuario
+$router->get('/usuario/crear', 'crear');
+$router->get('/usuario/actualizar','recetas');
+$router->get('/usuario/eliminar','recetas');
+$router->post('/usuario/eliminar','recetas');
+
+
 
 // Rutas Autenticacion
 $router->get('/login', [LoginController::class, 'login']);
@@ -45,7 +50,7 @@ $router->get('/logon', [LoginController::class, 'logon']);
 $router->post('/logon', [LoginController::class, 'logon']);
 
 
-
+// Rutas sin necesidad de Autenticacion.
 $router->get('/',[PaginaController::class, 'index']);
 $router->get('/doc','doc');
 $router->get('/contacto','contacto');
