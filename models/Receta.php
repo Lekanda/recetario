@@ -6,7 +6,7 @@ class Receta extends ActiveRecord{
 
     protected static $tabla='recetas';
 
-    protected static $columnasDB =['id','titulo','imagen','ingredientes','descripcion','creado'];
+    protected static $columnasDB =['id','titulo','imagen','ingredientes','descripcion','creado','usuarioId'];
 
     public $id;
     public $titulo;
@@ -14,6 +14,7 @@ class Receta extends ActiveRecord{
     public $ingredientes;
     public $descripcion;
     public $creado;
+    public $usuarioId;
 
     // Constructor
     public function __construct($args = []){
@@ -23,6 +24,7 @@ class Receta extends ActiveRecord{
         $this->ingredientes = $args['ingredientes'] ?? '';
         $this->descripcion = $args['descripcion'] ?? '';
         $this->creado = date('Y/m/d');
+        $this->usuarioId = $args['usuarioId'] ?? '';
     }
 
     public function validar(){
@@ -34,9 +36,6 @@ class Receta extends ActiveRecord{
         if (strlen($this->titulo) < 4) {
             self::$errores[] = "Titulo 4 letras minimo";
         }
-        // if (!$this->imagen) {
-        //     self::$errores[] = "Debes seleccionar una imagen para la propiedad";
-        // }
         if (!$this->ingredientes) {
             self::$errores[] = "Debes añadir ingredientes";
         }

@@ -4,6 +4,7 @@ namespace Controllers;
 use MVC\Router;
 use Model\Receta;
 use Model\Categoria;
+use Model\Admin;
 use Intervention\Image\ImageManagerStatic as Image;
 
 
@@ -33,15 +34,26 @@ class RecetaController{
     public static function crear (Router $router) {
 
         $receta = new Receta();
+        $usuarios= Admin::all();
 
+        // $admin = $_SESSION['usuario'];
+        
+        
         // Arreglo con mensajes de errores
         $errores = Receta::getErrores();
         // debuguear($errores);
-
-
+        
+        
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            
+            // debuguear($receta->usuarioId);
+            // debuguear($_POST);
+
+
             // El constructor de la clase es un Arreglo y $_POST tambien por eso se puede pasar asi.
             $receta = new Receta($_POST['receta']);
+            $usuario =
+            // debuguear($_SESSION);
             // debuguear($receta);
             // debuguear($_FILES['receta']);
 
@@ -64,10 +76,10 @@ class RecetaController{
             }
 
             // debuguear($_SERVER["DOCUMENT_ROOT"]);
-
+            
             // Validar 
             $errores = $receta->validar();
-    
+            
             // Comprobar que no haya errores en arreglo $errores. Comprueba que este VACIO (empty).
             if (empty($errores)) {
                 // Crear la carpeta imagenes
@@ -77,6 +89,7 @@ class RecetaController{
             }
             // Guarda la imagen en el servidor
             $image->save(CARPETAS_IMAGENES . $nombreImagen);
+            // debuguear($receta);
     
             // Guarda en la DB
            $receta->guardar();
@@ -84,9 +97,21 @@ class RecetaController{
 
         $router->render('/recetas/crear',[
             'errores' => $errores,
-            'receta' => $receta
+            'receta' => $receta,
+            'usuarios' => $usuarios
         ]);
     }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

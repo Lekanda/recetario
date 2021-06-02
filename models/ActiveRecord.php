@@ -182,14 +182,17 @@ class ActiveRecord{
         $query = "SELECT * FROM " . static::$tabla . " WHERE id = ${id}";
         // debuguear($query);
         $resultado = self::consultarSQL($query);
+        // debuguear($resultado);
 
         return array_shift($resultado); // array_shift: Nos devuelve el primer resultado de un arreglo
     }
-    
-    // Metodo para hacer consultas a SQL DB. REUTILIZABLE
+
+
+    // Metodo para hacer consultas a SQL DB. REUTILIZABLE. SOLO HACE CONSULTA
     public static function consultarSQL ($query) {
         //*** Consultar la DB ***
         $resultado = self::$db->query($query);
+        // debuguear($resultado);
         //*** Iterar los resultados ***
         $array = [];
         while ($registro = $resultado->fetch_assoc()){
@@ -201,6 +204,8 @@ class ActiveRecord{
         //*** retornar los resultados ***
         return $array;
     }
+
+
 
     protected static function crearObjeto($registro){
         $objeto = new static; // Quiere decir 'self' la clase padre(Propiedad)
@@ -216,7 +221,7 @@ class ActiveRecord{
         return $objeto;
     }
 
-    // Sincroniza el obj en memoriacon los cambios realizados por el usuario
+    // Sincroniza el obj en memoria con los cambios realizados por el usuario
     public function sincronizar($args = []){
         // debuguear($args);
         foreach ($args as $key => $value) {

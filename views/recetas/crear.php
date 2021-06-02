@@ -1,3 +1,17 @@
+<?php 
+    // debuguear($_SESSION);
+
+
+    foreach ($usuarios as $usuario ) {
+        if($usuario->email == $_SESSION['usuario']){
+            $receta->usuarioId = $usuario->id;
+            // debuguear($receta->usuarioId);
+        }
+    } 
+    // debuguear($receta);
+?>
+
+
 <main class="contenedor seccion main-crear">
     <h1 class="titulo-main">Crear Receta</h1>
 
@@ -9,6 +23,13 @@
             <?php echo $error; ?>
         </div>
     <?php endforeach; ?>
+
+
+
+
+
+
+
 
     <form class="formulario" method="POST" enctype="multipart/form-data">
         <?php include __DIR__ . '/formulario-receta.php' ?>
