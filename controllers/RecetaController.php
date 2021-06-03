@@ -15,28 +15,33 @@ class RecetaController{
         $categorias = Categoria::all();
         $usuarios= Admin::all();
 
+        
         // Muestra mensaje condicional, si no hay lo pone como null
         $resultado = $_GET['resultado'] ?? null;
         // debuguear($_GET);
         // debuguear($resultado);
         // debuguear($recetas);
-
+        
         $router->render('/recetas/admin',[
             'categorias' => $categorias,
             'recetas' => $recetas,
             'usuarios' => $usuarios,
             'resultado' => $resultado
-        ]);
-    }
+            ]);
+        }
 
-
-
-
-
+        
+        
+        
+        
     public static function crear (Router $router) {
-
+        
         $receta = new Receta();
         $usuarios= Admin::all();
+        $categorias = Categoria::all();
+        // debuguear($categorias);
+        $categoriasArray = (array) $categorias;
+        // debuguear($categoriasArray);
 
         // $admin = $_SESSION['usuario'];
         
@@ -48,8 +53,8 @@ class RecetaController{
         
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
-            // debuguear($receta->usuarioId);
             // debuguear($_POST);
+            // debuguear($receta->usuarioId);
 
 
             // El constructor de la clase es un Arreglo y $_POST tambien por eso se puede pasar asi.
@@ -100,6 +105,7 @@ class RecetaController{
         $router->render('/recetas/crear',[
             'errores' => $errores,
             'receta' => $receta,
+            'categorias' => $categorias,
             'usuarios' => $usuarios
         ]);
     }

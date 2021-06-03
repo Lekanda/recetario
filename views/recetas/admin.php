@@ -36,7 +36,7 @@
         <tbody class="cuerpo-tabla-propiedades">
             <!-- Mostrar los resultados -->
             <?php foreach ($recetas as $receta) : ?>
-                <?php if($usuarioId == $receta->usuarioId) { ?> -->
+                <?php if($usuarioId === $receta->usuarioId) { ?>
                     
                         <tr class="ficha-receta">
                             <td><?php echo $receta->titulo; ?></td>

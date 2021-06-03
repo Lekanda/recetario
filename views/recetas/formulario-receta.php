@@ -1,5 +1,5 @@
 <fieldset>
-    <legend>Informacion General</legend>
+    <legend>Informacion Receta</legend>
 
     <label for="titulo">Titulo:</label>
     <input type="text" id="titulo" name="receta[titulo]" placeholder="Titulo Receta, 4 letras minimo" value="<?php echo s($receta->titulo); ?>">
@@ -24,8 +24,19 @@
     <textarea id="descripcion" name="receta[descripcion]" placeholder="Descripcion receta, 10 letras minimo"><?php echo s($receta->descripcion); ?></textarea>
 
     <input type="hidden" name="receta[usuarioId]" value="<?php echo $receta->usuarioId; ?>">
-    
+</fieldset>
 
+<fieldset>
+    <legend>Selecciona una Categoria</legend>
+    <label for="categoria">categoria</label>
+    <select name="receta[categoriaId]" id="categoria">
+        <option selected value="">-- Selecciona un categoria --</option>
+        <?php foreach ($categorias as $categoria) { ?>
+            <option value="<?php echo $categoria->id ?>">
+                <?php echo $categoria->nombre ?>
+            </option>
+        <?php } ?>
+    </select>
 </fieldset>
 
 

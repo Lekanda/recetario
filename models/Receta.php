@@ -6,7 +6,7 @@ class Receta extends ActiveRecord{
 
     protected static $tabla='recetas';
 
-    protected static $columnasDB =['id','titulo','imagen','ingredientes','descripcion','creado','usuarioId'];
+    protected static $columnasDB =['id','titulo','imagen','ingredientes','descripcion','creado','usuarioId','categoriaId'];
 
     public $id;
     public $titulo;
@@ -15,6 +15,7 @@ class Receta extends ActiveRecord{
     public $descripcion;
     public $creado;
     public $usuarioId;
+    public $categoriaId;
 
     // Constructor
     public function __construct($args = []){
@@ -25,6 +26,7 @@ class Receta extends ActiveRecord{
         $this->descripcion = $args['descripcion'] ?? '';
         $this->creado = date('Y/m/d');
         $this->usuarioId = $args['usuarioId'] ?? '';
+        $this->categoriaId = $args['categoriaId'] ?? '1';
     }
 
     public function validar(){
