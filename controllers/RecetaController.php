@@ -13,6 +13,7 @@ class RecetaController{
         // debuguear($router);
         $recetas = Receta::all();
         $categorias = Categoria::all();
+        $usuarios= Admin::all();
 
         // Muestra mensaje condicional, si no hay lo pone como null
         $resultado = $_GET['resultado'] ?? null;
@@ -23,6 +24,7 @@ class RecetaController{
         $router->render('/recetas/admin',[
             'categorias' => $categorias,
             'recetas' => $recetas,
+            'usuarios' => $usuarios,
             'resultado' => $resultado
         ]);
     }
@@ -127,10 +129,13 @@ class RecetaController{
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // debuguear($_POST);
+            // debuguear($_POST['receta']);
             // Asignar los atributos
             $args = $_POST['receta'];
+            // debuguear($args);
             $receta->sincronizar($args);
             // debuguear($args);
+            // debuguear($receta);
             
             // Validacion
             $errores = $receta->validar();

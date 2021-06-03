@@ -1,3 +1,13 @@
+<?php
+    // debuguear($_SESSION);
+    foreach ($usuarios as $usuario ) {
+        if($usuario->email == $_SESSION['usuario']){
+            $usuarioId = $usuario->id;
+            // debuguear($receta->usuarioId);
+        }
+    } 
+?>
+
 <main class="contenedor seccion seccion-main">
     <h1 class="titulo-main">Listado Recetas</h1>
 
@@ -26,29 +36,32 @@
         <tbody class="cuerpo-tabla-propiedades">
             <!-- Mostrar los resultados -->
             <?php foreach ($recetas as $receta) : ?>
-                <tr class="ficha-receta">
-                    <td><?php echo $receta->titulo; ?></td>
-                    <td>
-                        <?php
-                        echo substr($receta->descripcion, 0, 350);
-                        ?>
-                        <br>
-                    </td>
+                <?php if($usuarioId == $receta->usuarioId) { ?> -->
+                    
+                        <tr class="ficha-receta">
+                            <td><?php echo $receta->titulo; ?></td>
+                            <td>
+                                <?php
+                                echo substr($receta->descripcion, 0, 350);
+                                ?>
+                                <br>
+                            </td>
 
 
-                    <td class="imagen-tabla"><img class="imagen-tabla" src="imagenes/<?php echo $receta->imagen; ?>" class="imagen-tabla"></td>
+                            <td class="imagen-tabla"><img class="imagen-tabla" src="imagenes/<?php echo $receta->imagen; ?>" class="imagen-tabla"></td>
 
 
-                    <td>
-                        <form method="POST" class="w-100" action="/receta/eliminar">
-                            <input type="hidden" name="id" value="<?php echo $receta->id; ?>">
-                            <input type="hidden" name="tipo" value="receta">
+                            <td>
+                                <form method="POST" class="w-100" action="/receta/eliminar">
+                                    <input type="hidden" name="id" value="<?php echo $receta->id; ?>">
+                                    <input type="hidden" name="tipo" value="receta">
 
-                            <input type="submit" class="boton-rojo-block" value="Eliminar">
-                        </form>
-                        <a href="/receta/actualizar?id=<?php echo $receta->id; ?>" class="boton-amarillo-block">Actualizar</a>
-                    </td>
-                </tr>
+                                    <input type="submit" class="boton-rojo-block" value="Eliminar">
+                                </form>
+                                <a href="/receta/actualizar?id=<?php echo $receta->id; ?>" class="boton-amarillo-block">Actualizar</a>
+                            </td>
+                        </tr>
+                <?php } ?>
             <?php endforeach; ?>
         </tbody>
     </table>
