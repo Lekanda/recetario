@@ -32,8 +32,8 @@
     <select name="receta[categoriaId]" id="categoria">
         <option selected value="">-- Selecciona un categoria --</option>
         <?php foreach ($categorias as $categoria) { ?>
-            <option value="<?php echo $categoria->id ?>">
-                <?php echo $categoria->nombre ?>
+            <option <?php echo $categoria->id === $receta->categoriaId ? 'selected' : '' ?> value="<?php echo s($categoria->id) ?>">
+                <?php echo s($categoria->nombre);?>
             </option>
         <?php } ?>
     </select>

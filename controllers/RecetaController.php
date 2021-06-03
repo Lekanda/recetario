@@ -40,8 +40,6 @@ class RecetaController{
         $usuarios= Admin::all();
         $categorias = Categoria::all();
         // debuguear($categorias);
-        $categoriasArray = (array) $categorias;
-        // debuguear($categoriasArray);
 
         // $admin = $_SESSION['usuario'];
         
@@ -53,8 +51,8 @@ class RecetaController{
         
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
-            // debuguear($_POST);
             // debuguear($receta->usuarioId);
+            // debuguear($_POST);
 
 
             // El constructor de la clase es un Arreglo y $_POST tambien por eso se puede pasar asi.
@@ -129,7 +127,8 @@ class RecetaController{
         $id = validarORedireccionar('/admin');
 
         $receta = Receta::find($id);
-
+        $categorias = Categoria::all();
+        
         $errores = Receta::getErrores();
 
 
@@ -174,6 +173,7 @@ class RecetaController{
             
         $router->render('/recetas/actualizar', [
             'receta' => $receta,
+            'categorias' => $categorias,
             'errores' => $errores
         ]);
 
