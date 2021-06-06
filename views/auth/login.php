@@ -4,7 +4,7 @@
         <div data-cy="alerta-login" class="alerta error"><?php echo $error; ?></div>
     <?php endforeach; ?>
 
-    <form method="POST" class="formulario" action="/login">
+    <form method="POST" class="formulario" action="/recetario/public/index.php/login">
         <fieldset>
             <legend>Introduce datos de Inicio de Sesion</legend>
 

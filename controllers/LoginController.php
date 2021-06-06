@@ -16,15 +16,17 @@ class LoginController{
             // debuguear($auth);
             $errores = $auth->validar();
             // debuguear($errores);
-
+            
             if (empty($errores)) {
                 // Verificar sí el usuario existe
                 $resultado = $auth->existeUsuario();
+                // debuguear($resultado);
                 if (!$resultado) {
                     $errores = Admin::getErrores();
                 } else {
                     // Verificar el Password
                     $autenticado = $auth->comprobarPassword($resultado);
+                    // debuguear($autenticado);
                     if ($autenticado) {
                         // Autenticar al usuario
                         $auth->autenticar();
@@ -79,7 +81,7 @@ class LoginController{
         $_SESSION = [];
         // debuguear($_SESSION);
 
-        header('Location: /');
+        header('Location: /recetario/public/index.php/');
 
     }
 

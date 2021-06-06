@@ -61,7 +61,7 @@
             // Proteger las rutas
             if (in_array($urlActual, $rutas_protegidas) && !$auth) {
                 // debuguear($urlActual);
-                header('Location: /');
+                header('Location: /recetario/public/index.php');
             }
 
             if($fn){
