@@ -44,14 +44,14 @@ if (!isset($inicio)) {
                     <div class="derecha">
                         <img class="dark-mode-boton" src="http://192.168.2.3/recetario/public/build/img/dark-mode.svg">
                         <nav data-cy="navegacion-header" class="navegacion">
-                            <a href="/recetario/public/index.php/receta/crear">+ Receta</a>
-                            <a href="/recetario/public/index.php/categoria/crear">+ Categoria</a>
-                            <a href="/recetario/public/index.php/documentacion">Doc</a>
-                            <a href="/recetario/public/index.php/contacto">Contacto</a>
+                            <a href="/receta/crear">+ Receta</a>
+                            <a href="/categoria/crear">+ Categoria</a>
+                            <a href="/documentacion">Doc</a>
+                            <a href="/contacto">Contacto</a>
                             <?php if ($auth) : ?>
-                                <a href="/recetario/public/index.php/logout">Cerrar Sesion</a>
+                                <a href="/logout">Cerrar Sesion</a>
                             <?php else : ?>
-                                <a href="/recetario/public/index.php/login">Login</a>
+                                <a href="/login">Login</a>
                             <?php endif ?>
                         </nav>
                     </div>
@@ -72,10 +72,10 @@ if (!isset($inicio)) {
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav data-cy="navegacion-footer" class="navegacion">
-                <a href="/recetario/public/index.php/receta/crear">+ Receta</a>
-                <a href="/recetario/public/index.php/categoria/crear">+ Categoria</a>
-                <a href="/recetario/public/index.php/documentacion">Doc</a>
-                <a href="/recetario/public/index.php/contacto">Contacto</a>
+                <a href="/receta/crear">+ Receta</a>
+                <a href="/categoria/crear">+ Categoria</a>
+                <a href="/documentacion">Doc</a>
+                <a href="/contacto">Contacto</a>
             </nav>
         </div>
 
